@@ -1,5 +1,7 @@
 package com.ark.employee.model;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created by Arun on 6/20/16.
  */

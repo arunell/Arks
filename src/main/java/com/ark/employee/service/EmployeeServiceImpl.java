@@ -12,6 +12,7 @@ import java.util.List;
  * Created by Arun on 6/20/16.
  */
 @Service
+
 @Transactional
 public class EmployeeServiceImpl implements EmployeeService {
     private List<Employee> employeeList;
@@ -26,6 +27,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee findById(long id) {
+       for(Employee employee : employeeList){
+           if(employee.getId() == id){
+               return employee;
+           }
+       }
         return null;
     }
 
